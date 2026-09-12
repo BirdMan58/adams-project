@@ -1,0 +1,37 @@
+:root {
+	--bg: #273338;
+	--fg: white;
+    --faint-fg: rgb(143, 143, 143);
+    --future-colour: #618764;
+    --past-colour: #2B5748;    
+    --next-colour: #86c68b; 
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.past {
+    border-left: solid 4px var(--past-colour);
+    padding: 10px;
+    color: var(--faint-fg);
+}
+
+.next {
+    border-left: solid 6px var(--next-colour);
+    padding: 20px;
+    font-weight: bold;
+    font-size: large;
+    background-color: var(--past-colour);
+}
+
+.future {
+    border-left: solid 4px var(--future-colour);
+    padding: 10px;
+}
