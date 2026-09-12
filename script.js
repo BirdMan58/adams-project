@@ -1,16 +1,16 @@
 const buses = [ 
-    { name: "Aayappas", time: 1602 }, 
-    { name: "Bini", time: 1608 }, 
+    { name: "Aayappas",     time: 1602 }, 
+    { name: "Bini",         time: 1608 }, 
     { name: "DivyaVishunu", time: 1612 }, 
-    { name: "Mariya", time: 1618 }, 
-    { name: "Jolly1", time: 1625 }, 
-    { name: "Jolly2", time: 1630 }, 
-    { name: "Zion", time: 1640 }, 
-    { name: "Chirayath", time: 1645 }, 
-    { name: "Lakshmi", time: 1650 }, 
-    { name: "Chirayath", time: 1655 }, 
-    { name: "Aanandha", time: 1705 }, 
-    { name: "Bincy", time: 1710 }, 
+    { name: "Mariya",       time: 1618 }, 
+    { name: "Jolly1",       time: 1625 }, 
+    { name: "Jolly2",       time: 1630 }, 
+    { name: "Zion",         time: 1640 }, 
+    { name: "Chirayath",    time: 1645 }, 
+    { name: "Lakshmi",      time: 1650 }, 
+    { name: "Chirayath",    time: 1655 }, 
+    { name: "Aanandha",     time: 1705 }, 
+    { name: "Bincy",        time: 1710 }, 
 ];
 
 let nextBusTime = getNextBusTime(getCurrentTime());
