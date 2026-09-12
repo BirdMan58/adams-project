@@ -17,7 +17,7 @@ let nextBusTime = getNextBusTime(getCurrentTime());
 
 update();
 renderBuses(getCurrentTime());
-setInterval(update, 500);
+setInterval(update, 30*1000);
 
 function renderBuses(currentTime) {
     let content = `<ul id="busList">`;
@@ -66,8 +66,12 @@ function getNextBusTime(currentTime) {
 }
 
 function updateTimer(currentTime) {
-    const waitingHr = Math.floor(nextBusTime/100 - currentTime/100);    
-    const waitingMin = Math.abs(nextBusTime%100 - currentTime%100);    
+    let waitingHr = Math.floor(nextBusTime/100 - currentTime/100);    
+    const waitingMin = Math.abs(nextBusTime%100 - currentTime%100);
+    
+    if(waitingHr < 0) {
+        waitingHr = waitingHr + 24;        
+    }
     
     document.getElementById("timer").innerText = `Next bus in ${waitingHr} hrs ${String(waitingMin).padStart(2, '0')} mins`;
 }
