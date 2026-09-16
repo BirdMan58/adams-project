@@ -67,7 +67,7 @@ function getNextBusTime(currentTime) {
 
 function updateTimer(currentTime) {
     const waitingHr = Math.floor(nextBusTime/100 - currentTime/100 + 24) % 24;    
-    const waitingMin = (nextBusTime%100 - currentTime%100 + 60) % 60;
+    const waitingMin = ((nextBusTime%100 - currentTime%100 + 60) % 60) - 1;
     const waitingSec = 59 - (new Date().getSeconds());
     
     if(waitingHr == 0) {
