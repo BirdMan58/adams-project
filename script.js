@@ -1,23 +1,23 @@
-const buses = [ 
-    { name: "Aayappas",     time: 1602 }, 
-    { name: "Bini",         time: 1608 }, 
-    { name: "DivyaVishunu", time: 1612 }, 
-    { name: "Mariya",       time: 1618 }, 
-    { name: "Jolly1",       time: 1625 }, 
-    { name: "Jolly2",       time: 1630 }, 
-    { name: "Zion",         time: 1640 }, 
-    { name: "Chirayath",    time: 1645 }, 
-    { name: "Lakshmi",      time: 1650 }, 
-    { name: "Chirayath",    time: 1655 }, 
-    { name: "Aanandha",     time: 1705 }, 
-    { name: "Bincy",        time: 1710 }, 
-];
+let buses = [];
 
-let nextBusTime = getNextBusTime(getCurrentTime());
+let nextBusTime;
 
-update();
-renderBuses(getCurrentTime());
-setInterval(update, 1000);
+fetchBus();
+
+function fetchBus() {
+    fetch(`./data/busList.json`)
+    .then(response => response.json())
+    .then(data => {
+        buses = data;
+        nextBusTime = getNextBusTime(getCurrentTime());
+        update();
+        renderBuses(getCurrentTime());
+        setInterval(update, 1000);
+    })
+    .catch(error => {
+        console.error('Error loading JSON:', error);
+    });
+}
 
 function renderBuses(currentTime) {
     let content = `<ul id="busList">`;
