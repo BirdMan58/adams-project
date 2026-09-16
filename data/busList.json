@@ -1,4 +1,6 @@
 [ 
+    { "name": "Chirayath",    "time": 1555 }, 
+    { "name": "Ajil",         "time": 1557 }, 
     { "name": "Aayappas",     "time": 1602 }, 
     { "name": "Bini",         "time": 1608 }, 
     { "name": "DivyaVishunu", "time": 1612 }, 
@@ -10,5 +12,8 @@
     { "name": "Lakshmi",      "time": 1650 }, 
     { "name": "Chirayath",    "time": 1655 }, 
     { "name": "Aanandha",     "time": 1705 }, 
-    { "name": "Bincy",        "time": 1710 } 
+    { "name": "Bincy",        "time": 1710 },
+    { "name": "Chirayath",    "time": 1714 },
+    { "name": "Bhagavathy",   "time": 1718 },
+    { "name": "Royex",        "time": 1720 } 
 ]
