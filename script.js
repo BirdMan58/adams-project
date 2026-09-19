@@ -79,7 +79,7 @@ function updateTimer(currentTime) {
 function update() {
     const currentTime = getCurrentTime();
 
-    if(currentTime > nextBusTime) {
+    if(currentTime => nextBusTime) {
         nextBusTime = getNextBusTime(currentTime);
         renderBuses(currentTime);
     }
